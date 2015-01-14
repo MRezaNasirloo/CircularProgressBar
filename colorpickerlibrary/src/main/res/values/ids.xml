@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="color_picker">false</item>
+    <item type="id" name="color_picker_swatch">false</item>
+    <item type="id" name="color_picker_checkmark">false</item>
+</resources>
