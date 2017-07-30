@@ -48,7 +48,7 @@ It is neccessary to add a constructor, Also we need to read values from `XML` la
         init(context, attrs);
     }
 
-In `init()` method we get and set our values from defined styleable and initialize our [Piant][2] objects.
+In `init()` method we get and set our values from defined styleable and initialize our [Paint][2] objects.
 
     private void init(Context context, AttributeSet attrs) {
         rectF = new RectF();
