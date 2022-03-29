@@ -3,10 +3,11 @@ package com.fourmob.colorpicker;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
+
+import androidx.fragment.app.DialogFragment;
 
 public class ColorPickerDialog extends DialogFragment implements ColorPickerSwatch.OnColorSelectedListener {
 	protected AlertDialog mAlertDialog;
@@ -56,8 +57,8 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerSwat
 
 	public Dialog onCreateDialog(Bundle bundle) {
 		View view = LayoutInflater.from(getActivity()).inflate(R.layout.color_picker_dialog, null);
-		this.mProgress = ((ProgressBar) view.findViewById(android.R.id.progress));
-		this.mPalette = ((ColorPickerPalette) view.findViewById(R.id.color_picker));
+		this.mProgress = view.findViewById(android.R.id.progress);
+		this.mPalette = view.findViewById(R.id.color_picker);
 		this.mPalette.init(this.mSize, this.mColumns, this);
 		if (this.mColors != null)
 			showPaletteView();

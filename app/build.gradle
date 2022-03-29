@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.mrn.customprogressbar"
         minSdkVersion 14
-        targetSdkVersion 21
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
     }
@@ -20,9 +20,8 @@ android {
 }
 
 dependencies {
-    //    compile project(':colorpickerlibrary')
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:21.0.3'
-    compile 'com.android.support:recyclerview-v7:21.0.0'
-    compile project(':colorpickerlibrary')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation project(':colorpickerlibrary')
 }
