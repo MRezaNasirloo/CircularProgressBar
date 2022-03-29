@@ -18,8 +18,8 @@ public class ColorPickerSwatch extends FrameLayout implements View.OnClickListen
 		this.mColor = color;
 		this.mOnColorSelectedListener = onColorSelectedListener;
 		LayoutInflater.from(paramContext).inflate(R.layout.color_picker_swatch, this);
-		this.mSwatchImage = ((ImageView) findViewById(R.id.color_picker_swatch));
-		this.mCheckmarkImage = ((ImageView) findViewById(R.id.color_picker_checkmark));
+		this.mSwatchImage = findViewById(R.id.color_picker_swatch);
+		this.mCheckmarkImage = findViewById(R.id.color_picker_checkmark);
 		setColor(color);
 		setChecked(checked);
 		setOnClickListener(this);
@@ -44,7 +44,7 @@ public class ColorPickerSwatch extends FrameLayout implements View.OnClickListen
 		this.mSwatchImage.setImageDrawable(new ColorStateDrawable(drawables, color));
 	}
 
-	public static abstract interface OnColorSelectedListener {
-		public abstract void onColorSelected(int color);
+	public interface OnColorSelectedListener {
+		void onColorSelected(int color);
 	}
 }

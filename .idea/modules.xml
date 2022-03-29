@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CustomProgressBar.iml" filepath="$PROJECT_DIR$/CustomProgressBar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/colorpickerlibrary/colorpickerlibrary.iml" filepath="$PROJECT_DIR$/colorpickerlibrary/colorpickerlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CircularProgressBar.iml" filepath="$PROJECT_DIR$/.idea/modules/CircularProgressBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CircularProgressBar.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CircularProgressBar.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/colorpickerlibrary/CircularProgressBar.colorpickerlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/colorpickerlibrary/CircularProgressBar.colorpickerlibrary.iml" />
     </modules>
   </component>
 </project>
-

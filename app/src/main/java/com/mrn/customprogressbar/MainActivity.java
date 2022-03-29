@@ -2,8 +2,6 @@ package com.mrn.customprogressbar;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,11 +10,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import com.fourmob.colorpicker.ColorPickerDialog;
 import com.fourmob.colorpicker.ColorPickerSwatch;
 
+import java.util.Objects;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,12 +94,7 @@ public class MainActivity extends ActionBarActivity {
                     circleProgressBar.setColor(color);
                 }
             });
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    colorPickerDialog.show(getFragmentManager(), "color_picker");
-                }
-            });
+            button.setOnClickListener(view -> colorPickerDialog.show(requireActivity().getSupportFragmentManager(), "color_picker"));
             seekBarProgress.setProgress((int) circleProgressBar.getProgress());
             seekBarProgress.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                 @Override
